@@ -46,7 +46,7 @@ print(len(capitalesMundo))
 
 datosJordan = {23: "Jordan", "Nombre": "Michael", "Equipo": "Chicago Bulls",
                # Usamos una lista dentro del diccionario.
-               "Anillos": (1991, 1992, 1993, 1996, 1997, 1998)}
+               "Anillos": [1991, 1992, 1993, 1996, 1997, 1998]}
 
 print(datosJordan)
 print(datosJordan["Anillos"])

@@ -24,4 +24,5 @@ print(" | ".join(empleados))
 
 # ------------------------------ Convertir un String en una lista. ------------------------------
 empleados2 = "Pedro, Ramón, Juan, Laura, Jero"
+# split es para transformar un string en una lista.
 print(empleados2.split())
