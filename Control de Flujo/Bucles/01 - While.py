@@ -19,5 +19,6 @@ el bucle y me muestre el mensaje y es una condiciones que no se pueden cumplir a
 while edad <= 0 or edad >= 80:
     print("Edad no valida.")
     edad = int(input("Introduce tu edad: "))
+    # break # Con esto salgo del bucle.
 
 print("Puedes pasar.\n" "Edad del usuario: " + str(edad))
