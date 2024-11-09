@@ -33,5 +33,12 @@ numeroIntroducido = int(input("Introduce un número: "))
 # Este es el objeto iterable que devuelve el generador.
 sucesionPares = generarPares(numeroIntroducido)
 
-for i in sucesionPares:
-    print(i)
+# yield genera un objeto iterable, por lo que podemos recorrerlo con un for.
+# for i in sucesionPares:
+#  print(i)
+
+# PERO en vez de recorrerlo con un for, podemos recorrerlo con next().
+print(next(sucesionPares))
+print("Ahora va el siguiente valor.")
+print(next(sucesionPares))
+# El programa nos va dando un valor cada vez que llamamos a next().
