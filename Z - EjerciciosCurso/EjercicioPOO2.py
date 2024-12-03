@@ -23,21 +23,37 @@ class CuentaCorriente:
 
 class CuentaJoven(CuentaCorriente):
 
-    def __init__(self, numeroCuenta, titular, saldo, bonus_promocion=200):
+    def __init__(self, numeroCuenta, titular, saldo, bonus_promocion):
         super().__init__(numeroCuenta, titular, saldo)
+        self.tiene_bonus = False  # para saber si se aplicó un bonus
 
         pregbonus = input("Quieres anadir un bonus? (si/no): ")
-        if pregbonus == "si":
-            self.saldo = int(bonus_promocion) + int(saldo)
+        if pregbonus.lower() == "si":
+            input_bonus = input("Introduce el bonus: ")
+            bonus_promocion = int(input_bonus)
+            self.saldo += bonus_promocion
+            self.bonus_promocion = bonus_promocion
+            self.tiene_bonus = True
             print(f"\nHas anadido {bonus_promocion} euros a tu saldo.")
-        elif pregbonus == "no":
+        elif pregbonus.lower() == "no":
             print("\nNo has anadido ningun bonus a tu saldo.")
 
+    def getDatos(self):
+        datos = super().getDatos()
+        if self.tiene_bonus:  # solo muestra el bonus si se aceptó
+            datos += ", Bonus: " + str(self.bonus_promocion)
+        return datos
+
     def getBonus(self):
-        return self.bonus_promocion
+        if self.tiene_bonus:
+            return f"El bonus es de {self.bonus_promocion} euros."
+        else:
+            return "No se aplicó ningún bonus."
 
 
-persona1 = CuentaJoven("123456B", "Jero", 2000)
+# any es un valor cualquiera
+persona1 = CuentaJoven("123456B", "Jero", 2000, any)
 
 persona1.ingresarDinero()
 print(persona1.getDatos())
+print(persona1.getBonus())

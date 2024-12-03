@@ -1,0 +1,10 @@
+README.md
+setup.py
+07-Modulos/CreacionDeModulosv2.py
+07-Modulos/Paquetes Distribuibles.py
+07-Modulos/Paquetes/CalculosBasicos/CreacionDeModulos.py
+07-Modulos/Paquetes/CalculosBasicos/__init__.py
+calculosbasicosmatematicos.egg-info/PKG-INFO
+calculosbasicosmatematicos.egg-info/SOURCES.txt
+calculosbasicosmatematicos.egg-info/dependency_links.txt
+calculosbasicosmatematicos.egg-info/top_level.txt
