@@ -1,0 +1,4 @@
+Hola, este es mi primer archivo creado desde Python,
+Si hago esto se genera otra linea?
+Estoy realizando un ejercicio de sustitucion de linea
+Estoy agregando texto con open('archivo.txt', 'a')

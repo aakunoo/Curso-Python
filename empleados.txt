@@ -1,0 +1,3 @@
+1001:John:Doe:3000
+1002:Jane:Doe:4000
+1003:Jack:Smith:3500
