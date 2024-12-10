@@ -14,9 +14,11 @@ try:
 
     dicc = {}
     for result in resultados:
-        dicc[result[0]] = result[1]  #film_id como clave, description como valor
+        dicc[result[0]] = result[1]  # film_id como clave, description como valor
 
-    lista_tuplas = [(film_id, descripcion) for film_id, descripcion in dicc.items()]
+    lista_tuplas = []
+    for film_id, descripcion in dicc.items():
+        lista_tuplas.append((film_id, descripcion))
 
     with open("peliculas.txt", "w") as archivo:
         for film_id, descripcion in lista_tuplas:
