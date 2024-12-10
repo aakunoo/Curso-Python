@@ -21,6 +21,8 @@ def visualiza(num1 = 10, /, *, num2):
             case _:
                 print("Error: Los argumentos deben ser enteros o cadenas.")
 
+        print("No ocurrieron excepciones")
+
     except Mayor as m:
         print(f"Error: {m}")
     except ZeroDivisionError as zde:
@@ -28,7 +30,7 @@ def visualiza(num1 = 10, /, *, num2):
     except Exception as e:
         print(f"Error general: {e}")
     finally:
-        print("La función acaba aquí.")
+        print("Proceso finalizado")
 
 
 visualiza(45, num2=30)
